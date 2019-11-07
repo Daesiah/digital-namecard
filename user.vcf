@@ -3,12 +3,12 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 11.2.2//EN
 N:Siah;Daemian;;;
 FN: Daemian  Siah 
-ORG:The ID Firm Pte Ltd;
-TITLE:Interior Designer\nProject Coordinator
-EMAIL;type=INTERNET;type=WORK;type=pref:daemian@theidfirmsg.com
+ORG:Regimen Project Master Pte Ltd;
+TITLE:Project Coordinator
+EMAIL;type=INTERNET;type=WORK;type=pref:daemianid@gmail.com
 TEL;type=WORK;type=VOICE:+65 9233 4383
-item1.ADR;type=WORK;type=pref:;;21 Kaki Bukit Rd 4\nSynergy@KB\, #01-02\Level 2;;;417810;Singapore
+item1.ADR;type=WORK;type=pref:;;6 Tagore Drive\n\Tagore Building\, #02-22;;;787623;Singapore
 item1.X-ABADR:sg
-item2.URL;type=pref:theidfirmsg.com
+item2.URL;type=pref:Regimen.com.sg
 item2.X-ABLabel:_$!<HomePage>!$_
 END:VCARD
