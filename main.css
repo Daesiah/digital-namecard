@@ -1,29 +1,29 @@
-/* ===== Global Reset ===== */
+/* ===== Reset ===== */
 
 * {
   box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   background: #ffffff;
+  height: 100%;
 }
 
-/* ===== Layout Structure ===== */
+/* ===== Page Layout ===== */
 
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-.page-wrapper {
+.wrapper {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 500px;
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -33,33 +33,31 @@ body {
 .banner {
   background: black;
   height: 80px;
+  width: 100%;
 }
 
-/* ===== Text Styling ===== */
+/* ===== Profile Section ===== */
+
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
 
 .text-name {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  color: #111;
-  text-align: center;
+  margin-bottom: 4px;
 }
 
 .text-title-company {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  color: #444;
-  text-align: center;
+  color: #555;
 }
 
-.text-detail {
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-}
+/* ===== Info Rows ===== */
 
-/* ===== Info Blocks ===== */
-
-.info-block {
+.info-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,12 +68,17 @@ body {
 .info-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .info-left img {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
+}
+
+.text-detail {
+  font-size: 15px;
+  color: #333;
 }
 
 a {
@@ -83,7 +86,7 @@ a {
   color: inherit;
 }
 
-/* ===== Button ===== */
+/* ===== Save Button ===== */
 
 .save-btn {
   background: black;
@@ -92,7 +95,6 @@ a {
   padding: 14px;
   margin-top: 25px;
   font-family: 'Muli', sans-serif;
-  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -104,12 +106,4 @@ a {
   text-align: center;
   padding: 15px;
   font-size: 12px;
-}
-
-/* ===== Responsive ===== */
-
-@media screen and (max-width: 480px) {
-  .text-name {
-    font-size: 24px;
-  }
 }
