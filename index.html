@@ -13,16 +13,13 @@
 
 <div class="wrapper">
 
-    <!-- Top Banner -->
     <div class="banner"></div>
 
-    <!-- Profile Section -->
-    <div class="profile-section">
-        <img src="aerostar-logo.png" alt="Aerostar Logo" class="company-logo">
-
+    <!-- Profile -->
+    <div class="profile-section fade-in">
+        <img src="aerostar-logo.png" class="company-logo">
         <div class="name">Daemian Siah</div>
         <div class="title">Operations Manager</div>
-
         <div class="company-list">
             AEROSTAR CORPORATION PTE LTD<br>
             AEROSTAR ENGINEERING PTE LTD<br>
@@ -32,8 +29,8 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="contact-section">
+    <!-- Contact -->
+    <div class="contact-section fade-in delay-1">
 
         <a href="mailto:daemian@aerostar.com.sg" class="contact-item">
             <div class="contact-left">
@@ -51,6 +48,15 @@
             <img src="assets/right-arrow.svg" class="contact-arrow">
         </a>
 
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6592334383" target="_blank" class="contact-item">
+            <div class="contact-left">
+                <img src="assets/black-icon-whatsapp.png" class="contact-icon">
+                <div class="contact-text">WhatsApp Direct</div>
+            </div>
+            <img src="assets/right-arrow.svg" class="contact-arrow">
+        </a>
+
         <a href="https://www.aerostar.com.sg" target="_blank" class="contact-item">
             <div class="contact-left">
                 <img src="assets/black-icon-website.png" class="contact-icon">
@@ -59,25 +65,37 @@
             <img src="assets/right-arrow.svg" class="contact-arrow">
         </a>
 
-        <a href="https://www.google.com/maps/place/Aerostar+Corporation+Pte+Ltd/" target="_blank" class="contact-item">
-            <div class="contact-left">
-                <img src="assets/black-icon-address.png" class="contact-icon">
-                <div class="contact-text">
-                    28 Sin Ming Lane #07-136<br>
-                    Midview City S(573972)
-                </div>
-            </div>
-            <img src="assets/right-arrow.svg" class="contact-arrow">
-        </a>
-
     </div>
 
-    <!-- Save Contact -->
-    <div class="save-section">
-        <a href="user.vcf" class="save-btn">Save Contact</a>
+    <!-- QR Code -->
+    <div class="qr-section fade-in delay-2">
+        <div class="qr-title">Scan to share contact</div>
+        <img src="qr-code.png" class="qr-img">
     </div>
 
 </div>
+
+<!-- Sticky Save Button -->
+<a href="user.vcf" class="save-btn">Save Contact</a>
+
+<script>
+document.querySelectorAll(".contact-item").forEach(item => {
+    item.addEventListener("click", function(e) {
+        const circle = document.createElement("span");
+        circle.classList.add("ripple");
+
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        circle.style.width = circle.style.height = size + "px";
+        circle.style.left = e.clientX - rect.left - size/2 + "px";
+        circle.style.top = e.clientY - rect.top - size/2 + "px";
+
+        this.appendChild(circle);
+
+        setTimeout(() => circle.remove(), 500);
+    });
+});
+</script>
 
 </body>
 </html>
